@@ -236,6 +236,42 @@ main {
             }
         }
     }
+    .apDesk {
+        width: 100%;
+        background-color:#3D5A80;
+        .container {
+            min-height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .marketBox {
+                width: 30%;
+                align-self: center;
+                border: 2px solid #EE6C4D;
+                .saleBox {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    background-color: #EE6C4D;
+                    span {
+                        padding: 10px 0;
+                        color: $second-color;
+                        align-self: center;
+                    }
+                    button {
+                        width: 30%;
+                        padding: 10px 0;
+                        align-self: center;
+                        &:hover {
+                            background-color: red;
+                            color: aqua;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {

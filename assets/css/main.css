@@ -230,6 +230,42 @@ main .fiftysectionBox .container button {
   background-color: #EE6C4D;
   color: white;
 }
+main .apDesk {
+  width: 100%;
+  background-color: #3D5A80;
+}
+main .apDesk .container {
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .apDesk .container .marketBox {
+  width: 30%;
+  align-self: center;
+  border: 2px solid #EE6C4D;
+}
+main .apDesk .container .marketBox .saleBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #EE6C4D;
+}
+main .apDesk .container .marketBox .saleBox span {
+  padding: 10px 0;
+  color: white;
+  align-self: center;
+}
+main .apDesk .container .marketBox .saleBox button {
+  width: 30%;
+  padding: 10px 0;
+  align-self: center;
+}
+main .apDesk .container .marketBox .saleBox button:hover {
+  background-color: red;
+  color: aqua;
+}
 
 footer {
   width: 100%;

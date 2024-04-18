@@ -108,13 +108,57 @@
                 <button>Send</button>
             </div>
         </section>
+        <section class="apDesk">
+            <div class="container apiDesk">
+                <div class="marketBox">
+                    <img src="./assets/IMAGE/Group 24.svg" alt="">
+                    <div class="saleBox">
+                        <span>Mehsul</span>
+                        <span>50$</span>
+                        <button onclick="addToBasket('Mehsul', '50$')">Add to Basket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <div class="container">
+        <div class="container footerBox">
             <span>IWMYWF</span>
         <img src="./assets/IMAGE/Group 41.svg" alt="">
         <img src="./assets/IMAGE/Group 40.svg" alt="">
         </div>
     </footer>
+    <script>
+        // Define a variable to hold the basket items
+        var basketItems = [];
+
+        // Function to add an item to the basket
+        function addToBasket(productName, price) {
+            // Add the item to the basketItems array
+            basketItems.push({ productName: productName, price: price });
+
+            // Update the basket display
+            updateBasket();
+        }
+
+        // Function to update the display of the basket
+        function updateBasket() {
+            var basketElement = document.getElementById('basket');
+            basketElement.innerHTML = ''; // Clear previous content
+
+            var basketList = document.createElement('ul');
+
+            // Loop through basketItems and create list items for each item
+            basketItems.forEach(function(item) {
+                var listItem = document.createElement('li');
+                listItem.textContent = item.productName + ' - ' + item.price;
+                basketList.appendChild(listItem);
+            });
+
+            // Append the list to the basket div
+            basketElement.appendChild(basketList);
+        }
+    </script>
+    <script src="./assets/JS/index.js"></script>
 </body>
 </html>
